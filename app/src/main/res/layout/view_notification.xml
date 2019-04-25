@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/universal_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- User section -->
+        <include layout="@layout/subview_notification_user_section" />
+
+        <ImageView
+            android:id="@+id/ivNotificationPostPic"
+            android:layout_width="@dimen/icon_high_width_height"
+            android:layout_height="@dimen/icon_high_width_height"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+</FrameLayout>

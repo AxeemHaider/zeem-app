@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackground"
+    android:id="@+id/rlMainLayout">
+
+
+    <!-- Header Toolbar -->
+    <include layout="@layout/subview_appbar" />
+
+    <!-- Mention RecyclerView -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMention"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llSendComment"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:layout_below="@+id/appBarLayout"/>
+
+    <!-- Comment RecyclerView -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llSendComment"
+        android:scrollbars="none"
+        android:layout_below="@+id/appBarLayout" />
+
+    <!-- Comment view -->
+    <!--<include layout="@layout/view_comment_text" />-->
+
+    <!--<include layout="@layout/view_comment_audio" />-->
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsCommentLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- No internet view -->
+    <ViewStub
+        android:id="@+id/vsCommentNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout="@layout/include_no_internet"/>
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsCommentNothingFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout="@layout/include_nothing_found"/>
+
+    <!-- Send Comment view-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llSendComment"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- For text comment view -->
+        <LinearLayout
+            android:id="@+id/llCommentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_corner_white_bg"
+            android:elevation="@dimen/overview_elevation"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginLeft="@dimen/universal_padding"
+            android:layout_marginRight="@dimen/universal_padding">
+
+            <ImageButton
+                android:id="@+id/ibCommentProfilePic"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"/>
+
+            <EditText
+                android:id="@+id/etCommentText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/type_a_comment"
+                android:inputType="textShortMessage|textCapSentences"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/ibCommentCamera"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/ic_camera"/>
+
+        </LinearLayout>
+
+        <!-- For audio comment view -->
+        <LinearLayout
+            android:id="@+id/llCommentAudioView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_corner_white_bg"
+            android:elevation="@dimen/overview_elevation"
+            android:layout_marginRight="-15dp"
+            android:layout_marginEnd="-15dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/universal_padding"
+            android:layout_marginStart="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivCommentBlinkMic"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                app:srcCompat="@drawable/ic_mic_red" />
+
+            <TextView
+                android:id="@+id/tvCommentAudioTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/universal_padding"
+                android:layout_marginStart="@dimen/universal_padding"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18sp"
+                android:text="00:00" />
+
+            <TextView
+                android:id="@+id/tvCommentSlideCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/slide_to_cancel"/>
+
+        </LinearLayout>
+
+        <!--<ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/action_tint_mic"
+            android:layout_marginBottom="-20dp"
+            app:srcCompat="@drawable/ic_mic"/>-->
+
+        <ImageView
+            android:id="@+id/ibCommentSendText"
+            android:layout_width="@dimen/icon_high_width_height"
+            android:layout_height="@dimen/icon_high_width_height"
+            android:visibility="gone"
+            android:elevation="@dimen/overview_elevation"
+            android:layout_marginRight="@dimen/universal_padding"
+            android:layout_marginEnd="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:layout_marginTop="@dimen/universal_padding"
+            app:srcCompat="@drawable/ic_send" />
+
+        <ImageView
+            android:id="@+id/ibCommentAudioRecording"
+            android:layout_width="@dimen/icon_high_width_height"
+            android:layout_height="@dimen/icon_high_width_height"
+            android:elevation="@dimen/overview_elevation"
+            android:layout_marginRight="@dimen/universal_padding"
+            android:layout_marginEnd="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:layout_marginTop="@dimen/universal_padding"
+            app:srcCompat="@drawable/audio_recording" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

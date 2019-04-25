@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_margin="@dimen/universal_padding">
+
+    <ImageView
+        android:id="@+id/ivDialogBadge"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/shape_badge_dark"/>
+
+    <TextView
+        android:id="@+id/tvDialogBadgeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/universal_padding"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <Button
+        android:id="@+id/btnDialogBadgeGotit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_corner_white_login_bg"
+        android:textColor="@android:color/black"
+        android:text="Got it"/>
+
+</LinearLayout>

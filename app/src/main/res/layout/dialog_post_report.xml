@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/universal_padding"
+        android:textColor="@color/colorSecondaryText"
+        android:text="Choose a reason for reporting this post:"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"/>
+
+    <TextView
+        android:id="@+id/reportSpam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:padding="@dimen/universal_padding"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:text="@string/it_s_spam"/>
+
+    <TextView
+        android:id="@+id/reportAntiReligion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:padding="@dimen/universal_padding"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:text="@string/against_religion"/>
+
+    <TextView
+        android:id="@+id/reportSexualContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:padding="@dimen/universal_padding"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:text="@string/sexual_content"/>
+
+    <TextView
+        android:id="@+id/reportOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:padding="@dimen/universal_padding"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:text="@string/it_s_inappropriate"/>
+
+</LinearLayout>

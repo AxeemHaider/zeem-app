@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/cameraLayout">
+
+    <org.octabyte.zeem.Profile.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bgColor="#000000"/>
+
+
+    <ImageView
+        android:id="@+id/pictureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <org.octabyte.zeem.Camera.CameraDrawing
+        android:id="@+id/cameraDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/writingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80000000"
+        android:ems="10"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="300dp"/>
+
+    <EditText
+        android:id="@+id/writingEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80000000"
+        android:ems="10"
+        android:textSize="15sp"
+        android:inputType="textShortMessage"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

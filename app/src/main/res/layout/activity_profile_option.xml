@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/subview_appbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@android:color/black"
+                android:text="Account Settings"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingEditProfile"
+                android:text="Edit Profile"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingCreateList"
+                android:text="Create Circle"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingGetFriends"
+                android:text="@string/friends"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingGetFollowers"
+                android:text="@string/followers"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingGetFollowing"
+                android:text="@string/following"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/setTagOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="30sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/tag_options"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/setTagOptions"
+                    android:layout_height="1dp"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/setTagOptions"
+                    android:textColor="@color/colorPrimaryText"
+                    android:text="@string/how_tag_posts_show_on_your_profile"
+                    android:id="@+id/textView5" />
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/show_tag_arrays"
+                    android:prompt="@string/show_tag_prompt"
+                    android:layout_alignBaseline="@+id/textView5"
+                    android:layout_alignBottom="@+id/textView5"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:id="@+id/spinnerHowTag" />
+                <TextView
+                    android:id="@+id/setTvHowTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_small"
+                    android:text="@string/show_tag_public"
+                    android:layout_below="@+id/spinnerHowTag"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/setTvHowTag"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#cccccc"
+                    android:id="@+id/view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:text="@string/who_can_tag_you"
+                    android:layout_below="@+id/view"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/textView6" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/who_tag_arrays"
+                    android:prompt="@string/who_tag_prompt"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:id="@+id/spinnerWhoTag" />
+                <TextView
+                    android:id="@+id/setTvWhoTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_small"
+                    android:text="@string/who_tag_public"
+                    android:layout_below="@+id/spinnerWhoTag"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/setTvWhoTag"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:text="@string/can_anonymous_person_tag_you"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/textView7" />
+
+                <Switch
+                    android:id="@+id/switchAnonymousTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView7"
+                    android:layout_alignBottom="@+id/textView7"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"/>
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_small"
+                    android:text="@string/anonymous_user_tag_option"
+                    android:layout_below="@+id/switchAnonymousTag"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/textView8"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@android:color/black"
+                android:text="Help"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingHowToUse"
+                android:text="How to use"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingInviteFriend"
+                android:text="Invite Friends on WhatsApp"
+                android:textAlignment="textStart" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingSendFeedback"
+                android:text="Send Feedback"
+                android:textAlignment="textStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingTermsAndCondition"
+                android:text="Terms and Condition"
+                android:textAlignment="textStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingContactUs"
+                android:text="Contact us"
+                android:textAlignment="textStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+
+            <Button
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:onClick="settingAppDetail"
+                android:text="App Detail"
+                android:textAlignment="textStart" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

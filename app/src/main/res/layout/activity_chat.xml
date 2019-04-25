@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Chat Header -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:background="@android:color/white" >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/toolbarNavigationBack"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                android:layout_marginLeft="@dimen/toolbar_side_margin"
+                android:layout_marginStart="@dimen/toolbar_side_margin"
+                app:srcCompat="@drawable/ic_nav_back"/>
+
+            <ImageView
+                android:id="@+id/ivUserPic"
+                android:layout_width="@dimen/icon_middle_width_height"
+                android:layout_height="@dimen/icon_middle_width_height"
+                android:layout_marginLeft="@dimen/universal_padding"
+                android:layout_marginStart="@dimen/universal_padding"
+                android:layout_marginRight="@dimen/universal_padding"
+                android:layout_marginEnd="@dimen/universal_padding"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/font_size_extra_small"
+                    android:text="Instant Chat"/>
+
+            </LinearLayout>
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/llMessageSend"/>
+
+    <!-- Footer - For sending message -->
+    <LinearLayout
+        android:id="@+id/llMessageSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_round_corner_white_bg"
+        android:elevation="@dimen/overview_elevation"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:layout_marginLeft="@dimen/universal_padding"
+        android:layout_marginRight="@dimen/universal_padding">
+
+        <EditText
+            android:id="@+id/etMessageText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/type_a_message"
+            android:inputType="textShortMessage|textCapSentences|textMultiLine"
+            android:padding="5dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/ivMessageSend"
+            android:layout_width="@dimen/icon_high_width_height"
+            android:layout_height="@dimen/icon_high_width_height"
+            android:elevation="@dimen/overview_elevation"
+            android:layout_marginRight="@dimen/universal_padding"
+            android:layout_marginEnd="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:layout_marginTop="@dimen/universal_padding"
+            app:srcCompat="@drawable/ic_send" />
+
+    </LinearLayout>
+</RelativeLayout>

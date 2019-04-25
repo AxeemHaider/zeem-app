@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragCamEditing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lyInitialEditingTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnWriteText"
+            android:layout_width="@dimen/icon_width_height"
+            android:layout_height="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/text_writing" />
+
+        <ImageView
+            android:id="@+id/btnDrawLine"
+            android:layout_width="@dimen/icon_width_height"
+            android:layout_height="@dimen/icon_width_height"
+            android:layout_alignTop="@+id/btnWriteText"
+            android:layout_marginLeft="@dimen/universal_padding"
+            android:layout_marginStart="@dimen/universal_padding"
+            android:layout_toEndOf="@+id/btnWriteText"
+            android:layout_toRightOf="@+id/btnWriteText"
+            app:srcCompat="@drawable/drawline" />
+
+        <ImageView
+            android:id="@+id/btnBackToCamera"
+            android:layout_width="@dimen/icon_width_height"
+            android:layout_height="@dimen/icon_width_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/btnDrawLine"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/left_arrow" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyInitialEditingBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/btnCameraEffects"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/picture_effect" />
+
+        <ImageView
+            android:id="@+id/btnCameraDone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="saveImage"
+            app:srcCompat="@drawable/right_arrow"
+            android:layout_alignTop="@+id/btnCameraEffects"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--<ImageView
+            android:id="@+id/btnRecordAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnShowEffects"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/audio_recording" />
+
+        <ProgressBar
+            android:id="@+id/recordingProgressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:layout_height="72dp"
+            android:layout_alignBottom="@+id/btnShowEffects"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/circular"
+            android:secondaryProgress="100"
+            android:visibility="invisible" />-->
+
+        <!--<ImageView
+            android:id="@+id/btnVideoStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="37dp"
+            android:background="@drawable/audio_recording"
+            android:visibility="invisible" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

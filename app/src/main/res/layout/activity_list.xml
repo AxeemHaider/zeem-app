@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/llMainLayout">
+
+    <!-- Toolbar -->
+    <include layout="@layout/subview_toolbar_for_list" />
+
+    <!-- For UpdateListActivity - used for members count -->
+    <!--<TextView
+        android:id="@+id/tvFriendCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:text="Loading..."
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />-->
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsListLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsListNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_gravity="center" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsListNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_gravity="center" />
+
+    <!-- Recylerview -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvLists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

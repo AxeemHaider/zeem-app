@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/universal_padding"
+    android:layout_marginRight="@dimen/universal_padding"
+    android:layout_marginLeft="@dimen/universal_padding"
+    android:layout_marginEnd="@dimen/universal_padding"
+    android:layout_marginStart="@dimen/universal_padding"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMessageReceive"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_message_receive"
+        android:padding="@dimen/universal_padding"
+        android:layout_marginRight="70dp"
+        android:layout_marginEnd="70dp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tvMessageSend"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/shape_message_send"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:padding="@dimen/universal_padding"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <TextView
+        android:id="@+id/tvMessageCheck"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:textSize="@dimen/font_size_extra_small"/>
+
+</LinearLayout>

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.octabyte.zeem.Profile.RevealBackgroundView
+            android:id="@+id/vRevealBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bgColor="@android:color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <!-- Header -->
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/appbar_height"
+                    android:background="@android:color/white">
+
+                    <android.support.v7.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/appbar_height">
+
+                        <ImageView
+                            android:id="@+id/toolbarNavigationBack"
+                            android:layout_width="@dimen/icon_width_height"
+                            android:layout_height="@dimen/icon_width_height"
+                            app:srcCompat="@drawable/ic_nav_back" />
+
+                        <Spinner
+                            android:id="@+id/publish_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/toolbar_side_margin"
+                            android:layout_marginRight="@dimen/toolbar_side_margin"
+                            android:gravity="end"
+                            android:onClick="publishStatus"
+                            android:text="@string/post"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/font_size_high" />
+
+                    </android.support.v7.widget.Toolbar>
+
+                </android.support.design.widget.AppBarLayout>
+                <!-- End Header -->
+
+                <!-- Mention view -->
+                <LinearLayout
+                    android:id="@+id/llMentionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appBarLayout"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etTagPeople"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/universal_padding"
+                        android:background="@drawable/shape_round_corner_white_bg"
+                        android:drawableLeft="@drawable/ic_header_explorer"
+                        android:drawableStart="@drawable/ic_header_explorer"
+                        android:elevation="@dimen/overview_elevation"
+                        android:hint="Search..."
+                        android:padding="4dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvMention"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" />
+
+                    <!-- Loading view -->
+                    <ViewStub
+                        android:id="@+id/vsPublishMentionLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/include_progress_bar"
+                        android:layout_gravity="center" />
+
+                    <!-- Nothing found view -->
+                    <ViewStub
+                        android:id="@+id/vsPublishMentionNothingFound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout="@layout/include_nothing_found"/>
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/svMainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appBarLayout"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/llMainLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- User section -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/universal_padding">
+
+                            <ImageView
+                                android:id="@+id/ivUserProfile"
+                                android:layout_width="@dimen/icon_high_width_height"
+                                android:layout_height="@dimen/icon_high_width_height" />
+
+                            <TextView
+                                android:id="@+id/tvUserFullName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/universal_padding"
+                                android:layout_marginStart="@dimen/universal_padding"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|end">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/expire"
+                                    android:textColor="@color/colorSecondaryText"
+                                    android:textStyle="bold" />
+
+                                <Spinner
+                                    android:id="@+id/expire_spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/expire_arrays"
+                                    android:prompt="@string/expire_prompt" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!-- End user section -->
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/universal_padding"
+                            android:background="@color/colorDivider" />
+
+                        <!-- Card status view -->
+                        <LinearLayout
+                            android:id="@+id/llCardStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/universal_padding"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:id="@+id/colorLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#673AB7,#ffffff"
+                                        app:solidColor="#673AB7" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#FF9800,#ffffff"
+                                        app:solidColor="#FF9800" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#9C27B0,#ffffff"
+                                        app:solidColor="#9C27B0" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#FF4081,#ffffff"
+                                        app:solidColor="#FF4081" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#212121,#ffffff"
+                                        app:solidColor="#212121" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#FFC107,#ffffff"
+                                        app:solidColor="#FFC107" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#023373,#00b896,#ffffff"
+                                        app:solidColor="#023373,#00b896" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#ee9ca7,#ffdde1,#ffffff"
+                                        app:solidColor="#ee9ca7,#ffdde1" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#C6FFDD,#FBD786,#f7797d,#ffffff"
+                                        app:solidColor="#C6FFDD,#FBD786,#f7797d" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#12c2e9,#c471ed,#f7797d,#ffffff"
+                                        app:solidColor="#12c2e9,#c471ed,#f7797d" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#373B44,#4286f4,#ffffff"
+                                        app:solidColor="#373B44,#4286f4" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#2980B9,#6DD5FA,#ffffff"
+                                        app:solidColor="#2980B9,#6DD5FA" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#aa4b6b,#6b6b83,#3b8d99,#ffffff"
+                                        app:solidColor="#aa4b6b,#6b6b83,#3b8d99" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#c31432,#240b36,#ffffff"
+                                        app:solidColor="#c31432,#240b36" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#f12711,#f5af19,#ffffff"
+                                        app:solidColor="#f12711,#f5af19" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#00F260,#0575E6,#ffffff"
+                                        app:solidColor="#00F260,#0575E6" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#83a4d4,#b6fbff,#ffffff"
+                                        app:solidColor="#83a4d4,#b6fbff" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#CC95C0,#DBD4B4,#7AA1D2,#ffffff"
+                                        app:solidColor="#CC95C0,#DBD4B4,#7AA1D2" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#FFE000,#799F0C,#ffffff"
+                                        app:solidColor="#FFE000,#799F0C" />
+
+                                    <org.octabyte.zeem.Utils.CircularTextView
+                                        android:layout_width="@dimen/color_dimens"
+                                        android:layout_height="@dimen/color_dimens"
+                                        android:layout_margin="@dimen/color_margin"
+                                        android:onClick="setCardColor"
+                                        android:tag="#FF0000,#FF7F00,#FFFF00,#00FF00,#ffffff"
+                                        app:solidColor="#FF0000,#FF7F00,#FFFF00,#00FF00" />
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+                            <org.octabyte.zeem.Camera.SquaredFrameLayout
+                                android:id="@+id/cardStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <include layout="@layout/subview_publish_card_caption" />
+
+                            </org.octabyte.zeem.Camera.SquaredFrameLayout>
+
+                        </LinearLayout>
+
+                        <!-- publish status view with image and caption -->
+                        <LinearLayout
+                            android:id="@+id/llStatusLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/universal_padding">
+
+                            <ImageView
+                                android:id="@+id/ivPhoto"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="#eeeeee"
+                                android:scaleType="centerCrop" />
+
+                            <EditText
+                                android:id="@+id/etDescription"
+                                android:layout_width="0dp"
+                                android:layout_height="96dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="top"
+                                android:inputType="textMultiLine|textShortMessage|textCapSentences"
+                                android:hint="@string/write_caption_here"
+                                android:lines="3"
+                                android:padding="8dp"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <!-- Caption view when status type is Audio -->
+                        <EditText
+                            android:id="@+id/etCaption"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/white"
+                            android:hint="@string/write_caption_here"
+                            android:inputType="textMultiLine|textShortMessage|textCapSentences"
+                            android:lines="3"
+                            android:padding="8dp"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <!-- Audio status view -->
+                        <LinearLayout
+                            android:id="@+id/llAudio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/llStatusAudioView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/universal_padding"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginLeft="@dimen/universal_padding"
+                                android:layout_marginRight="-15dp"
+                                android:layout_marginStart="@dimen/universal_padding"
+                                android:layout_weight="1"
+                                android:background="@drawable/shape_round_corner_white_bg"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ivAudioRecording"
+                                    android:layout_width="@dimen/icon_width_height"
+                                    android:layout_height="@dimen/icon_width_height"
+                                    app:srcCompat="@drawable/ic_mic_red" />
+
+                                <TextView
+                                    android:id="@+id/tvAudioTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/universal_padding"
+                                    android:layout_marginStart="@dimen/universal_padding"
+                                    android:text="00:00"
+                                    android:textColor="@color/colorSecondaryText"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvAudioCancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="end"
+                                    android:text="@string/slide_to_cancel"
+                                    android:textColor="@color/colorSecondaryText"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/ivSendAudioStatus"
+                                android:layout_width="@dimen/icon_high_width_height"
+                                android:layout_height="@dimen/icon_high_width_height"
+                                android:layout_marginBottom="@dimen/universal_padding"
+                                android:layout_marginEnd="@dimen/universal_padding"
+                                android:layout_marginRight="@dimen/universal_padding"
+                                android:layout_marginTop="@dimen/universal_padding"
+                                app:srcCompat="@drawable/audio_recording" />
+
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider" />
+
+                        <!-- Bottom view -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Added Location -->
+                            <TextView
+                                android:id="@+id/tvAddedLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_bottom_border"
+                                android:drawableLeft="@drawable/ic_location_blue"
+                                android:drawableStart="@drawable/ic_location_blue"
+                                android:gravity="center_vertical"
+                                android:hint="@string/add_location"
+                                android:padding="@dimen/universal_padding"
+                                android:textColor="@color/colorButtonBlue" />
+
+                            <!-- Available locations -->
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_bottom_border"
+                                android:paddingBottom="@dimen/universal_padding"
+                                android:paddingTop="@dimen/universal_padding"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:id="@+id/llStatusLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"/>
+
+                            </HorizontalScrollView>
+
+                            <!-- Tagged users -->
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/universal_padding"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:id="@+id/llTagUsers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"/>
+
+                            </HorizontalScrollView>
+
+
+                            <!-- Search Tag people -->
+                            <TextView
+                                android:id="@+id/tvTagPeople"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_bottom_border"
+                                android:drawableLeft="@drawable/ic_tag"
+                                android:drawableStart="@drawable/ic_tag"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/universal_padding"
+                                android:text="@string/tag_people"
+                                android:textColor="@color/colorPrimaryText" />
+
+                            <!-- Comment switch -->
+                            <Switch
+                                android:id="@+id/commentSwitch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/universal_padding"
+                                android:text="@string/turn_off_comments"
+                                android:textColor="@color/colorPrimaryText" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/universal_padding">
+
+        <!-- Comment Profile pic -->
+        <include layout="@layout/subview_comment_profile_pic" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp">
+
+            <!-- Comment header, username and time -->
+            <include layout="@layout/subview_comment_header" />
+
+            <!-- Comment Text view -->
+            <TextView
+                android:id="@+id/tvCommentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/font_size_small"
+                />
+
+            <!-- Comment Reply -->
+            <include layout="@layout/subview_comment_reply" />
+
+        </LinearLayout>
+
+        <!-- Comment like view -->
+        <include layout="@layout/subview_comment_like" />
+
+    </LinearLayout>
+
+</FrameLayout>

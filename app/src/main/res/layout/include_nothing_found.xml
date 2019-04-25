@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/nothing_found"/>
+
+    <TextView
+        android:id="@+id/tvNothingFoundTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/font_size_high"
+        android:textStyle="bold"
+        android:text="@string/whoops_nothing_found"/>
+
+    <TextView
+        android:id="@+id/tvNothingFoundMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorSecondaryText"
+        android:text="@string/we_couldn_t_find_anything_related_to_this"/>
+
+    <TextView
+        android:id="@+id/tvNothingFoundMessageLine2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorSecondaryText"
+        android:text="@string/maybe_check_later"/>
+
+    <Button
+        android:id="@+id/btnInviteFriends"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:background="@drawable/shape_button_blue_bg"
+        android:textColor="@android:color/white"
+        android:elevation="@dimen/overview_elevation"
+        android:text="Invite Friends"/>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/llMainLayout">
+
+    <!-- Toolbar -->
+    <include layout="@layout/subview_appbar" />
+
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsUserLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsUserNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_no_internet"
+        android:gravity="center" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsUserNothingFound"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_nothing_found"
+        android:gravity="center" />
+
+    <!-- Recylerview -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

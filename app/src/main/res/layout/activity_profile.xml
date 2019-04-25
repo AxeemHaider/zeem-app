@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.octabyte.zeem.Profile.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bgColor="@android:color/white"/>
+
+    <!-- Header -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+            <LinearLayout
+                android:id="@+id/vUserProfileRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax">
+
+                <!-- Header section, back button, add, setting -->
+                <!--<ImageButton
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:paddingTop="@dimen/universal_padding"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_nav_back"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/ivAddFriend"
+                        android:layout_width="@dimen/icon_width_height"
+                        android:layout_height="@dimen/icon_width_height"
+                        android:layout_marginRight="@dimen/margin_btw_icons"
+                        app:srcCompat="@drawable/ic_add_person"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivUserOption"
+                        android:layout_width="@dimen/icon_width_height"
+                        android:layout_height="@dimen/icon_width_height"
+                        android:layout_marginLeft="@dimen/margin_btw_icons"
+                        app:srcCompat="@drawable/ic_setting"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <!-- middle section badge, pic, saved -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/ibSavedPost"
+                        android:layout_width="@dimen/icon_middle_width_height"
+                        android:layout_height="@dimen/icon_middle_width_height"
+                        android:elevation="@dimen/overview_elevation"
+                        android:background="@drawable/shape_save"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:id="@+id/ibInstantChat"
+                        android:layout_width="@dimen/icon_middle_width_height"
+                        android:layout_height="@dimen/icon_middle_width_height"
+                        android:elevation="@dimen/overview_elevation"
+                        android:background="@drawable/shape_chat"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivUserProfilePhoto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp" />
+
+                    <ImageButton
+                        android:id="@+id/ibUserBadge"
+                        android:layout_width="@dimen/icon_middle_width_height"
+                        android:layout_height="@dimen/icon_middle_width_height"
+                        android:padding="5dp"
+                        android:elevation="@dimen/overview_elevation"
+                        android:background="@drawable/shape_circle_white_bg"
+                        app:srcCompat="@drawable/shape_badge_dark"/>
+
+                </LinearLayout> <!-- End middle section -->
+
+                <!-- Name, status and follow button section -->
+                <LinearLayout
+                    android:id="@+id/vUserDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvUserFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:id="@+id/tvUserStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textAlignment="center"
+                        android:paddingRight="24dp"
+                        android:paddingLeft="24dp"/>
+
+                    <Button
+                        android:id="@+id/btnUserAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="@dimen/universal_padding"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:background="@drawable/shape_button_blue_bg"
+                        android:textColor="@android:color/white"
+                        android:elevation="@dimen/overview_elevation"
+                        android:text="FOLLOWING" />
+
+                </LinearLayout> <!-- End Name, status and follow button section -->
+
+                <!-- Section user stats -->
+                <LinearLayout
+                    android:id="@+id/vUserStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/llUserPostsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPostCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/font_size_high" />
+
+                        <TextView
+                            android:id="@+id/tvPostCountBottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="posts"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/font_size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFollowersCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFollowerCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/font_size_high" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="followers"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/font_size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llUserFollowing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFollowingCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/font_size_high" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="following"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/font_size_small" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStarCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/font_size_high" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="stars"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/font_size_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout> <!-- End Main container -->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/universal_padding"
+        android:id="@+id/rvProfileGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/universal_padding"
+        android:visibility="gone"
+        android:id="@+id/rvProfileListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/universal_padding"
+        android:visibility="gone"
+        android:id="@+id/rvSavedPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsProfileLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsProfileNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_gravity="center" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsProfileNothingFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_gravity="center" />
+
+    <!-- No Post Found -->
+    <ViewStub
+        android:id="@+id/vsProfileNoPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_post_found"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <!-- No Saved Post Found -->
+    <ViewStub
+        android:id="@+id/vsProfileNoSavedPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_saved_post"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+
+</android.support.design.widget.CoordinatorLayout>

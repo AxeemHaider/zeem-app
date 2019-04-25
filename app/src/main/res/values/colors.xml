@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme Color -->
+    <color name="colorPrimaryDark">#FFFFFF</color> <!-- used for title bar -->
+    <color name="colorPrimaryDarker">#1976D2</color>
+    <color name="colorPrimaryLight">#BBDEFB</color>
+    <color name="colorPrimary">#023373</color>
+
+    <color name="colorSecondary">#00b896</color>
+    <color name="colorSecondaryDark">#388E3C</color>
+    <color name="colorSecondaryLight">#C8E6C9</color>
+
+    <color name="colorRed">#FF0C08</color> <!-- User in footer bottom navigation -->
+
+    <color name="colorTextIcon">#FFFFFF</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#DDDDDD</color>
+    <!--<color name="colorDivider">#BDBDBD</color>-->
+    <color name="defaultBackground">#EEEEEE</color>
+
+    <color name="iconColor">#313131</color>
+
+    <!-- Camera Media color -->
+    <color name="colorVideo">#F44336</color>
+
+    <!-- Button -->
+    <color name="colorButtonBlue">#0099cc</color>
+
+    <!-- Ripple Color -->
+    <color name="rippelColor">#0099CC</color>
+
+    <!-- Context menu -->
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
+    <color name="btn_context_menu_text_red">#ffff0000</color>
+
+    <!-- Badge color -->
+    <color name="badgeBrown">#d9675f</color>
+    <color name="badgeSilver">#f5fafa</color>
+    <color name="badgeGold">#ffca58</color>
+
+    <!-- used in focus view background -->
+    <color name="focus_view_background">#AA000000</color>
+
+    <!-- used for intro slides -->
+    <!-- Screens background color-->
+    <color name="bg_screen_profile">#3F51B5</color>
+    <color name="bg_screen_audio">#FF5722</color>
+    <color name="bg_screen_anonymous">#9C27B0</color>
+    <color name="bg_screen_talking">#F44336</color>
+    <color name="bg_screen_chat">#607D8B</color>
+    <color name="bg_screen_circle">#795548</color>
+    <color name="bg_screen_nearby">#2196F3</color>
+    <color name="bg_screen_badge">#FF9800</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_profile">#303F9F</color>
+    <color name="dot_dark_audio">#E64A19</color>
+    <color name="dot_dark_anonymous">#7B1FA2</color>
+    <color name="dot_dark_talking">#D32F2F</color>
+    <color name="dot_dark_chat">#455A64</color>
+    <color name="dot_dark_circle">#5D4037</color>
+    <color name="dot_dark_nearby">#1976D2</color>
+    <color name="dot_dark_badge">#F57C00</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_profile">#C5CAE9</color>
+    <color name="dot_light_audio">#FFCCBC</color>
+    <color name="dot_light_anonymous">#E1BEE7</color>
+    <color name="dot_light_talking">#FFCDD2</color>
+    <color name="dot_light_chat">#CFD8DC</color>
+    <color name="dot_light_circle">#D7CCC8</color>
+    <color name="dot_light_nearby">#BBDEFB</color>
+    <color name="dot_light_badge">#FFE0B2</color>
+    <color name="custom_hint_color">#CCCCCC</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_profile</item>
+        <item>@color/dot_light_audio</item>
+        <item>@color/dot_light_anonymous</item>
+        <item>@color/dot_light_talking</item>
+        <item>@color/dot_light_chat</item>
+        <item>@color/dot_light_circle</item>
+        <item>@color/dot_light_nearby</item>
+        <item>@color/dot_light_badge</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_profile</item>
+        <item>@color/dot_dark_audio</item>
+        <item>@color/dot_dark_anonymous</item>
+        <item>@color/dot_dark_talking</item>
+        <item>@color/dot_dark_chat</item>
+        <item>@color/dot_dark_circle</item>
+        <item>@color/dot_dark_nearby</item>
+        <item>@color/dot_dark_badge</item>
+    </array>
+    <!-- End intro slide -->
+
+</resources>

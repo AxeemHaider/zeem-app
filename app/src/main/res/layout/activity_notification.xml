@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/root">
+
+    <!-- Notification TabLayout -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/notificationTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        app:tabIndicatorColor="@color/colorPrimaryText"
+        app:tabIndicatorHeight="1dp"
+        android:background="@drawable/shape_gradient_light_bg">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"/>
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/requests"/>
+
+    </android.support.design.widget.TabLayout>
+
+
+    <!-- Add RecyclerView here -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:layout_below="@id/notificationTabLayout"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFriendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:layout_below="@+id/notificationTabLayout"
+        android:visibility="gone"/>
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsNotificationLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_centerInParent="true" />
+
+    <!-- Mini Loading view -->
+    <ViewStub
+        android:id="@+id/vsNotificationMiniLoading"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout="@layout/include_progress_bar" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsNotificationNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_centerInParent="true" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsNotificationNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_centerInParent="true" />
+
+    <!-- Bottom navigation -->
+    <include layout="@layout/include_footer_navigation" />
+
+</RelativeLayout>

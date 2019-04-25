@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <org.octabyte.zeem.Camera.SquaredFrameLayout
+        android:id="@+id/vImageRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/subview_middle_section_card" />
+
+        <View
+            android:id="@+id/vBgLike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/action_tint_like_bg"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/ivLike1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_fill_star_light"
+            android:visibility="invisible" />
+
+        <!-- Loading view -->
+        <View
+            android:id="@+id/vProgressBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#77ffffff" />
+
+        <org.octabyte.zeem.Home.SendingProgressView
+            android:id="@+id/vSendingProgress"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+
+    </org.octabyte.zeem.Camera.SquaredFrameLayout>
+
+</merge>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/universal_padding"
+        android:paddingLeft="@dimen/universal_padding"
+        android:paddingBottom="@dimen/universal_padding"
+        android:paddingTop="@dimen/low_padding">
+
+        <ImageView
+            android:id="@+id/btnLike"
+            android:layout_width="@dimen/icon_middle_width_height"
+            android:layout_height="@dimen/icon_middle_width_height"
+            android:layout_marginRight="@dimen/margin_btw_icons"
+            android:layout_marginEnd="@dimen/margin_btw_icons"
+            app:srcCompat="@drawable/ic_hollo_star"/>
+
+        <ImageView
+            android:id="@+id/btnComments"
+            android:layout_width="@dimen/icon_middle_width_height"
+            android:layout_height="@dimen/icon_middle_width_height"
+            android:layout_marginRight="@dimen/margin_btw_icons"
+            android:layout_marginEnd="@dimen/margin_btw_icons"
+            app:srcCompat="@drawable/ic_comment" />
+
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="@dimen/icon_middle_width_height"
+            android:layout_height="@dimen/icon_middle_width_height"
+            android:src="@drawable/ic_more" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end">
+
+            <ImageView
+                android:layout_width="@dimen/badge_width_height"
+                android:layout_height="@dimen/badge_width_height"
+                android:src="@drawable/ic_fill_star" />
+
+            <TextSwitcher
+                android:id="@+id/tsLikesCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/universal_padding"
+                android:layout_marginStart="@dimen/universal_padding"
+                android:inAnimation="@anim/slide_in_like_counter"
+                android:outAnimation="@anim/slide_out_like_counter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="@color/colorSecondaryText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="@color/colorSecondaryText" />
+
+            </TextSwitcher>
+
+            <TextView
+                android:id="@+id/tvTotalComments"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/colorSecondaryText" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "1023368873540",
+    "firebase_url": "https://octabyte-zeem.firebaseio.com",
+    "project_id": "octabyte-zeem",
+    "storage_bucket": "octabyte-zeem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023368873540:android:99a79f1e5d9b5899",
+        "android_client_info": {
+          "package_name": "org.octabyte.zeem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023368873540-omc8kv42au2ic9fus1j3pd0qjn65njuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.octabyte.zeem",
+            "certificate_hash": "b0f7d7fb73eb9a152289b30004ec3aa76ff91356"
+          }
+        },
+        {
+          "client_id": "1023368873540-kjqbug9pgu0b51f4me3aross6rsrdq2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.octabyte.zeem",
+            "certificate_hash": "96a2473c67cd6f38c39625d274dc65f0330908ed"
+          }
+        },
+        {
+          "client_id": "1023368873540-6df9ud9jnvuvga60t4dipjps19i6ahd4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.octabyte.zeem",
+            "certificate_hash": "b3e41ba12fff08aafadffb60126103a198623f80"
+          }
+        },
+        {
+          "client_id": "1023368873540-ogu1774ea208vkvihkd2mdj77pndnqg4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.octabyte.zeem",
+            "certificate_hash": "4d251f36e84a397f86e28280477995dc396ca621"
+          }
+        },
+        {
+          "client_id": "1023368873540-ru51hfg6h73s2jah5mq9heovh98q2v1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDchwXZhSUgSLQmjvHryZh5mDfRicNGExA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023368873540-ru51hfg6h73s2jah5mq9heovh98q2v1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

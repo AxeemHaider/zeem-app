@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/lyEffectTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#22000000">
+
+        <TextView
+            android:id="@+id/btnCancelEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/universal_padding"
+            android:textColor="@android:color/white"
+            android:text="Cancel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <ImageView
+            android:id="@+id/btnEffectPanel"
+            android:layout_width="@dimen/icon_width_height"
+            android:layout_height="@dimen/icon_width_height"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/btnCancelEffect"
+            android:layout_toRightOf="@+id/btnCancelEffect"
+            app:srcCompat="@drawable/effect_icon_on" />
+
+        <ImageView
+            android:id="@+id/btnEffectCustomization"
+            android:layout_width="@dimen/icon_width_height"
+            android:layout_height="@dimen/icon_width_height"
+            android:layout_alignBottom="@+id/btnEffectPanel"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/btnEffectPanel"
+            android:layout_toRightOf="@+id/btnEffectPanel"
+            app:srcCompat="@drawable/custom_effect_off" />
+
+        <TextView
+            android:id="@+id/btnEffectDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/universal_padding"
+            android:textColor="@android:color/white"
+            android:text="Done"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lyEffectCustomization"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/btnEffectBrightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/brightness_icon"/>
+        <ImageView
+            android:id="@+id/btnEffectContrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/contrast_icon"/>
+        <ImageView
+            android:id="@+id/btnEffectSaturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/saturation_icon"/>
+        <ImageView
+            android:id="@+id/btnEffectVignette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/vignette_icon"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnCancelCustomEffect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_above="@+id/lyCustomEffect"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvEffectInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_above="@+id/lyCustomEffect"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/btnDoneCustomEffect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_above="@+id/lyCustomEffect"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/lyCustomEffect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="#80000000">
+
+        <SeekBar
+            android:id="@+id/barBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:visibility="gone"/>
+
+        <SeekBar
+            android:id="@+id/barContrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="13"
+            android:progress="1"
+            android:visibility="gone"/>
+
+        <SeekBar
+            android:id="@+id/barSaturation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="1"
+            android:visibility="gone"/>
+
+        <SeekBar
+            android:id="@+id/barVignette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="0"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <!--RecyclerView-->
+    <RelativeLayout
+        android:id="@+id/lyEffectPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filterThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:layout_marginTop="@dimen/universal_padding"
+            android:clipToPadding="false"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

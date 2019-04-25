@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation">
+
+        <!-- Top AppBarLayout - Header -->
+        <include layout="@layout/include_header_appbar" />
+
+        <!-- Post Feed - RecylerView -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvFeed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <!-- FAB view used to go to the top -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnGoToTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/btn_fab_margins"
+            android:layout_marginRight="@dimen/btn_fab_margins"
+            android:layout_marginEnd="@dimen/btn_fab_margins"
+            android:src="@drawable/ic_arrow_top"
+            app:backgroundTint="#fcfcfc"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="#ccc" />
+
+        <!-- Loading view -->
+        <ViewStub
+            android:id="@+id/vsHomeLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/include_progress_bar"
+            android:layout_gravity="center" />
+
+        <!-- No internet found -->
+        <ViewStub
+            android:id="@+id/vsHomeNoInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/include_no_internet"
+            android:layout_gravity="center" />
+
+
+        <!-- Nothing found view -->
+        <ViewStub
+            android:id="@+id/vsHomeNothingFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/include_nothing_found"
+            android:layout_gravity="center" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- BottomNavigationView - Footer -->
+    <include layout="@layout/include_footer_navigation" />
+
+
+</RelativeLayout>

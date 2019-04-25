@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_marginTop="16dp"
+    android:padding="@dimen/universal_padding">
+
+    <LinearLayout
+        android:id="@+id/llProfileTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/placeholder_user_light"/>
+
+        <TextView
+            android:id="@+id/tvChangePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/change_photo"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llUserSuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSuggestion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/tvSuggestion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/tvSuggestion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawableStart="@drawable/ic_person"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/custom_hint_color"
+        android:padding="@dimen/edittext_padding_in_create_profile"
+        android:hint="@string/username"
+        android:singleLine="true"
+        android:digits="@string/allowed_char_for_username" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_person_tag"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:padding="@dimen/edittext_padding_in_create_profile"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/custom_hint_color"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:hint="@string/fullname"
+        android:singleLine="true"
+        android:drawableStart="@drawable/ic_person_tag"
+        android:inputType="textCapWords"
+        android:digits="@string/allowed_char_for_name"/>
+
+    <EditText
+        android:id="@+id/etStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_status"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:padding="@dimen/edittext_padding_in_create_profile"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/custom_hint_color"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:hint="@string/your_status"
+        android:singleLine="true"
+        android:inputType="textCapSentences|textShortMessage"
+        android:drawableStart="@drawable/ic_status" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_email"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/custom_hint_color"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/edittext_padding_in_create_profile"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:hint="@string/email"
+        android:singleLine="true"
+        android:drawableStart="@drawable/ic_email" />
+
+    <TextView
+        android:id="@+id/tvDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_dob"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:padding="@dimen/edittext_padding_in_create_profile"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/custom_hint_color"
+        android:layout_marginTop="@dimen/universal_padding"
+        android:hint="@string/date_of_birth"
+        android:drawableStart="@drawable/ic_dob"
+        android:gravity="center_vertical"/>
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/universal_padding"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/genderMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/white"
+            android:text="Male"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/genderFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/white"
+            android:text="Female"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCreateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:background="@drawable/shape_round_corner_white_login_bg"
+        android:layout_marginLeft="@dimen/login_side_margin"
+        android:layout_marginRight="@dimen/login_side_margin"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        android:text="@string/create_profile" />
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsProfileLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+</LinearLayout>

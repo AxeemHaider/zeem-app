@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/universal_padding">
+
+        <!-- Comment Profile pic -->
+        <include layout="@layout/subview_comment_profile_pic" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp">
+
+            <!-- Comment header, username and time -->
+            <include layout="@layout/subview_comment_header" />
+
+            <!-- Comment Audio view -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:padding="@dimen/universal_padding"
+                android:background="@drawable/shape_round_corner_white_with_border"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivCommentAudioPlay"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    app:srcCompat="@drawable/ic_play"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/ivCommentSoundWaves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/sound_waves"/>
+
+                <TextView
+                    android:id="@+id/tvCommentAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="@color/colorPrimaryText"
+                    android:text="02:37" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Comment Reply -->
+            <include layout="@layout/subview_comment_reply" />
+
+        </LinearLayout>
+
+        <!-- Comment like view -->
+        <include layout="@layout/subview_comment_like" />
+
+    </LinearLayout>
+
+</FrameLayout>

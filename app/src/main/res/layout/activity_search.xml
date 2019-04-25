@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/subview_appbar" />
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsSearchLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsSearchNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_no_internet"
+        android:gravity="center" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsSearchNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/include_nothing_found"
+        android:gravity="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+
+
+</LinearLayout>

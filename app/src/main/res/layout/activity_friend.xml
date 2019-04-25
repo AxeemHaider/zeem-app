@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusableInTouchMode="true">
+
+    <!-- TabLayout view -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/friendsTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        app:tabIndicatorColor="@color/colorPrimaryText"
+        app:tabIndicatorHeight="1dp"
+        android:background="@drawable/shape_gradient_light_bg">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friends"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/followers"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/following"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blocked"/>
+
+    </android.support.design.widget.TabLayout>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_margin="@dimen/universal_padding"
+        android:elevation="@dimen/overview_elevation"
+        android:background="@drawable/shape_round_corner_white_bg"
+        android:drawableStart="@drawable/ic_header_explorer"
+        android:drawableLeft="@drawable/ic_header_explorer"
+        android:hint="Search..."/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsFriendLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_gravity="center" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsFriendNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_gravity="center" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsFriendNothingFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_gravity="center" />
+
+</LinearLayout>

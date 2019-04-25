@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/universal_padding"
+    android:background="#313131">
+
+    <EditText
+        android:id="@+id/etContactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:layout_marginBottom="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:hint="@string/hint_full_name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:background="@drawable/shape_round_corner_with_border_bg"
+        android:layout_marginBottom="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:digits="1234567890+"
+        android:maxLength="14"
+        android:inputType="phone"
+        android:hint="Phone number"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/universal_padding"
+        android:layout_gravity="center"
+        android:theme="@style/WhiteCheck"
+        android:checked="true"
+        android:onClick="checkBoxChecked"
+        android:text="@string/save_mobile_number_in_contacts"/>
+
+    <Button
+        android:id="@+id/btnContactAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:background="@drawable/shape_round_corner_white_login_bg"
+        android:layout_marginLeft="@dimen/login_side_margin"
+        android:layout_marginRight="@dimen/login_side_margin"
+        android:layout_marginBottom="@dimen/universal_padding"
+        android:textColor="@android:color/black"
+        android:text="Add Contact"/>
+
+</LinearLayout>

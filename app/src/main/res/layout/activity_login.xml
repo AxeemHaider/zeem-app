@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_gradient">
+
+    <!-- Form field view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logo"/>
+
+    <LinearLayout
+        android:id="@+id/lyLoginForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:background="@drawable/shape_round_corner_with_border_bg"
+            android:layout_marginLeft="@dimen/login_side_margin"
+            android:layout_marginRight="@dimen/login_side_margin"
+            android:layout_marginBottom="13dp"
+            android:singleLine="true"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/white"
+            android:digits="@string/allowed_char_for_name"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/hint_full_name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_side_margin"
+                android:layout_marginRight="@dimen/universal_padding"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:padding="13dp"
+                android:inputType="phone"
+                android:maxLength="3"
+                android:text="+1"
+                android:singleLine="true"
+                android:background="@drawable/shape_round_corner_with_border_bg"
+                android:layout_marginStart="@dimen/login_side_margin"
+                android:layout_marginEnd="@dimen/universal_padding" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:background="@drawable/shape_round_corner_with_border_bg"
+                android:layout_marginRight="@dimen/login_side_margin"
+                android:layout_marginBottom="13dp"
+                android:singleLine="true"
+                android:digits="1234567890"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:hint="@string/hint_phone_number"
+                android:layout_marginEnd="@dimen/login_side_margin" />
+
+        </LinearLayout>
+        <!-- Login button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:layout_marginLeft="@dimen/login_side_margin"
+            android:layout_marginRight="@dimen/login_side_margin"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:textColor="@android:color/black"
+            android:text="@string/log_in"
+            android:onClick="userLogin"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/by_log_in_you_are_accepting"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:onClick="openTermsAndCondition"
+                android:text="@string/term_and_condition"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyVerification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:background="@drawable/shape_round_corner_with_border_bg"
+                android:layout_marginLeft="@dimen/login_side_margin"
+                android:layout_marginRight="@dimen/login_side_margin"
+                android:layout_marginBottom="13dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:hint="@string/pin_code"/>
+
+            <Button
+                android:id="@+id/btnVerifyCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:background="@drawable/shape_round_corner_white_login_bg"
+                android:layout_marginLeft="@dimen/login_side_margin"
+                android:layout_marginRight="@dimen/login_side_margin"
+                android:layout_marginBottom="@dimen/universal_padding"
+                android:textColor="@android:color/black"
+                android:text="@string/verify" />
+
+            <TextView
+                android:id="@+id/tvCodeTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/change_phone_number"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:onClick="changePhoneNumber"/>
+
+        </LinearLayout>
+
+        <!-- Loading view -->
+
+        <ViewStub
+            android:id="@+id/vsLoginLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/include_progress_bar"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+    <!-- Powered By text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/powered_by_octabyte"/>
+
+</RelativeLayout>

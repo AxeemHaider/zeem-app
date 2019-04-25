@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Ripple background -->
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">64dp</dimen>
+
+    <!-- Default Dimens -->
+    <dimen name="universal_padding">8dp</dimen>
+    <dimen name="low_padding">5dp</dimen>
+    <dimen name="universal_elevation">4dp</dimen>
+    <dimen name="overview_elevation">2dp</dimen>
+    <dimen name="mini_elevation">1dp</dimen>
+
+    <!-- Major use in AppBarLayout Header of App -->
+    <dimen name="appbar_height">50dp</dimen>
+    <dimen name="margin_btw_icons">24dp</dimen>
+
+    <!-- BottomNavigationView - TextSize -->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+
+    <!-- CardView -->
+    <dimen name="badge_width_height">16dp</dimen>
+    <dimen name="divider_margin">16dp</dimen>
+
+    <!-- Icon size -->
+    <dimen name="icon_high_width_height">40dp</dimen>
+    <dimen name="icon_middle_width_height">30dp</dimen>
+    <dimen name="icon_width_height">24dp</dimen>
+
+    <!-- Font size-->
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="font_size_high">20sp</dimen>
+    <dimen name="font_size_extra_small">9sp</dimen>
+
+    <!-- Used in Drawable -->
+    <dimen name="circle_padding">3dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_side_margin">16dp</dimen>
+    <dimen name="toolbar_title_margin">32dp</dimen>
+
+    <!-- Only used in Login Activity -->
+    <dimen name="login_side_margin">25dp</dimen>
+
+    <!-- Only used for FAB button -->
+    <dimen name="btn_fab_margins">16dp</dimen>
+
+    <!-- Used for circular TextViews -->
+    <dimen name="color_dimens">25dp</dimen>
+    <dimen name="color_margin">3dp</dimen>
+
+    <!-- Used in camera -->
+    <dimen name="thumbnail_size">80dp</dimen>
+    <dimen name="camera_circle_move_left">70dp</dimen>
+
+    <!-- Used in select status activity -->
+    <dimen name="status_textView_width_height">70dp</dimen>
+
+    <!-- used in focus view -->
+    <dimen name="radius">50dp</dimen>
+    <dimen name="edittext_padding_in_create_profile">8dp</dimen>
+
+    <!-- used in intro slide -->
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30sp</dimen>
+    <dimen name="slide_desc">16sp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <!-- End intro slide -->
+
+    <!-- For show case view -->
+    <dimen name="showcase_radius">47dp</dimen>
+    <dimen name="showcase_radius_inner">47dp</dimen>
+    <dimen name="showcase_radius_outer">64dp</dimen>
+    <dimen name="showcase_radius_material">47dp</dimen>
+
+</resources>

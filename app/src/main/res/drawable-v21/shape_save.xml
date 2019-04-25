@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item
+        android:top="@dimen/circle_padding"
+        android:left="@dimen/circle_padding"
+        android:right="@dimen/circle_padding"
+        android:bottom="@dimen/circle_padding"
+        android:drawable="@drawable/ic_save">
+
+    </item>
+</layer-list>

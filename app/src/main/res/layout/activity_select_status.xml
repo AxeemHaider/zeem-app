@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background_gradient">
+
+    <ImageView
+        android:id="@+id/toolbarNavigationBack"
+        android:layout_width="@dimen/icon_width_height"
+        android:layout_height="@dimen/icon_width_height"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/left_arrow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_centerInParent="true">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlAudio">
+
+            <ImageView
+                android:id="@+id/ivAudio"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/audio_recording"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvAudioHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivAudio"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_audio"
+                android:text="@string/status_audio_recording"
+                android:layout_toEndOf="@+id/ivAudio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivAudio"
+                android:layout_below="@+id/tvAudioHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_audio_recording_msg"
+                android:layout_toEndOf="@+id/ivAudio" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlCamera">
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_camera"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvVideoHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivCamera"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_talking"
+                android:text="@string/status_camera_heading"
+                android:layout_toEndOf="@+id/ivCamera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivCamera"
+                android:layout_below="@+id/tvVideoHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_camera_msg"
+                android:layout_toEndOf="@+id/ivCamera" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlGIF">
+
+            <ImageView
+                android:id="@+id/ivGIF"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/capture_gif"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvGIFHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivGIF"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_anonymous"
+                android:text="@string/status_gif"
+                android:layout_toEndOf="@+id/ivGIF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivGIF"
+                android:layout_below="@+id/tvGIFHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_gif_msg"
+                android:layout_toEndOf="@+id/ivGIF" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlText">
+
+            <ImageView
+                android:id="@+id/ivText"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/placeholder_card"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvTextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivText"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_profile"
+                android:text="@string/status_text_heading"
+                android:layout_toEndOf="@+id/ivText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivText"
+                android:layout_below="@+id/tvTextHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_text_msg"
+                android:layout_toEndOf="@+id/ivText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlPhoto">
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/bg_screen_chat"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_gallery_icon"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvPhotoHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivPhoto"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_chat"
+                android:text="@string/status_photo_heading"
+                android:layout_toEndOf="@+id/ivPhoto" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivPhoto"
+                android:layout_below="@+id/tvPhotoHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_heading_msg"
+                android:layout_toEndOf="@+id/ivPhoto" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_corner_white_login_bg"
+            android:padding="@dimen/universal_padding"
+            android:layout_marginBottom="@dimen/universal_padding"
+            android:id="@+id/rlTalkingPhoto">
+
+            <ImageView
+                android:id="@+id/ivTalkingPhoto"
+                android:layout_width="@dimen/icon_high_width_height"
+                android:layout_height="@dimen/icon_high_width_height"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/intro_talking"
+                android:background="@color/bg_screen_talking"
+                android:padding="3dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tvTalkingPhotoHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivTalkingPhoto"
+                android:textStyle="bold"
+                android:textColor="@color/bg_screen_talking"
+                android:text="@string/status_talking_photo_heading"
+                android:layout_toEndOf="@+id/ivTalkingPhoto" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivTalkingPhoto"
+                android:layout_below="@+id/tvTalkingPhotoHeading"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/status_talking_photo_msg"
+                android:layout_toEndOf="@+id/ivTalkingPhoto" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/include_footer_navigation" />
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/subview_appbar" />
+
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_circular_textview_bg2"
+            android:elevation="@dimen/overview_elevation"
+            android:gravity="center_vertical"
+            android:text="TEXT"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/statusAudio"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_toRightOf="@+id/statusText"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_circular_textview_bg3"
+            android:elevation="@dimen/overview_elevation"
+            android:gravity="center_vertical"
+            android:text="AUDIO"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/statusPhoto"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_below="@+id/statusText"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_circular_textview_bg"
+            android:elevation="@dimen/overview_elevation"
+            android:gravity="center_vertical"
+            android:text="PHOTO"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusGIF"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_toLeftOf="@+id/statusText"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_circular_textview_bg2"
+            android:gravity="center_vertical"
+            android:text="GIF"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusTalkingPhoto"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_above="@+id/statusText"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_circular_textview_bg3"
+            android:gravity="center_vertical"
+            android:text="Talking Photo"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/statusVideo"
+            android:layout_width="@dimen/status_textView_width_height"
+            android:layout_height="@dimen/status_textView_width_height"
+            android:layout_below="@id/statusPhoto"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_circular_textview_bg"
+            android:elevation="@dimen/overview_elevation"
+            android:gravity="center_vertical"
+            android:text="VIDEO"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+        <include layout="@layout/include_footer_navigation" />
+
+    </RelativeLayout>-->
+
+
+
+</RelativeLayout>

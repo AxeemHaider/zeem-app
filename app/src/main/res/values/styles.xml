@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- Launcher theme for splash screen -->
+    <style name="AppTheme.Launcher">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="AppTheme.TransparentActivity">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.TransparentActivity.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="ContextMenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/action_context_menu</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Show Case view Themes-->
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#AA000000</item>
+        <item name="sv_showcaseColor">@android:color/holo_blue_dark</item>
+        <item name="sv_buttonText">@string/got_it</item>
+        <item name="sv_tintButtonColor">false</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+        <item name="sv_detailTextAppearance">@style/CustomText</item>
+    </style>
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomText" parent="TextAppearance.ShowcaseView.Detail.Light">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- For checkbox -->
+    <style name="WhiteCheck">
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+</resources>

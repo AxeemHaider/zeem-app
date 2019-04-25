@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragCamWriting">
+
+    <RelativeLayout
+        android:id="@+id/lyWritingText"
+        android:layout_width="match_parent"
+        android:background="#22000000"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/btnWritingCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/universal_padding"
+            android:textColor="@android:color/white"
+            android:text="Cancel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <HorizontalScrollView
+            android:id="@+id/lyWritingColors"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:id="@+id/writingColorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80000000"
+                    app:solidColor="#000000" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80F44336"
+                    app:solidColor="#F44336" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80E91E63"
+                    app:solidColor="#E91E63" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#809C27B0"
+                    app:solidColor="#9C27B0" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80673AB7"
+                    app:solidColor="#673AB7" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#803F51B5"
+                    app:solidColor="#3F51B5" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#802196F3"
+                    app:solidColor="#2196F3" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8000BCD4"
+                    app:solidColor="#00BCD4" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80009688"
+                    app:solidColor="#009688" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#804CAF50"
+                    app:solidColor="#4CAF50" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#808BC34A"
+                    app:solidColor="#8BC34A" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80CDDC39"
+                    app:solidColor="#CDDC39" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80FFEB3B"
+                    app:solidColor="#FFEB3B" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80FFC107"
+                    app:solidColor="#FFC107" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80FF9800"
+                    app:solidColor="#FF9800" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80FF5722"
+                    app:solidColor="#FF5722" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80795548"
+                    app:solidColor="#795548" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#809E9E9E"
+                    app:solidColor="#9E9E9E" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80607D8B"
+                    app:solidColor="#607D8B" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80F7CAC9"
+                    app:solidColor="#F7CAC9" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80F7786B"
+                    app:solidColor="#F7786B" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8091A8D0"
+                    app:solidColor="#91A8D0" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80034F84"
+                    app:solidColor="#034F84" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8098DDDE"
+                    app:solidColor="#98DDDE" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#809896A4"
+                    app:solidColor="#9896A4" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80DD4132"
+                    app:solidColor="#DD4132" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80FAE03C"
+                    app:solidColor="#FAE03C" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8079C753"
+                    app:solidColor="#79C753" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8088B04B"
+                    app:solidColor="#88B04B" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80F7CAC9"
+                    app:solidColor="#F7CAC9" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8092A8D1"
+                    app:solidColor="#92A8D1" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80955251"
+                    app:solidColor="#955251" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80B565A7"
+                    app:solidColor="#B565A7" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80009B77"
+                    app:solidColor="#009B77" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80DD4124"
+                    app:solidColor="#DD4124" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80D65076"
+                    app:solidColor="#D65076" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8045B8AC"
+                    app:solidColor="#45B8AC" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80EFC050"
+                    app:solidColor="#EFC050" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#805B5EA6"
+                    app:solidColor="#5B5EA6" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#809B2335"
+                    app:solidColor="#9B2335" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80DFCFBE"
+                    app:solidColor="#DFCFBE" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8055B4B0"
+                    app:solidColor="#55B4B0" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80ff0000"
+                    app:solidColor="#ff0000" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#8000ff00"
+                    app:solidColor="#00ff00" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#800000ff"
+                    app:solidColor="#0000ff" />
+
+                <org.octabyte.zeem.Camera.helper.CircularTextView
+                    android:layout_width="@dimen/color_dimens"
+                    android:layout_height="@dimen/color_dimens"
+                    android:layout_margin="@dimen/color_margin"
+                    android:tag="#80ffff00"
+                    app:solidColor="#ffff00" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/btnWritingDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/universal_padding"
+            android:textColor="@android:color/white"
+            android:text="Done"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/lyWritingColors"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:id="@+id/writingColorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="2dp"
+                    android:background="#FF660000"
+                    app:srcCompat="@drawable/color"
+                    android:onClick="writingColor"
+                    android:tag="#80FF660000" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="2dp"
+                    android:background="#FFFF0000"
+                    app:srcCompat="@drawable/color"
+                    android:onClick="writingColor"
+                    android:tag="#80FFFF0000" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <include layout="@layout/include_header_appbar" />
+
+    <org.octabyte.zeem.Utils.RippleBackground
+        android:id="@+id/rippleBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="#DDD"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="3"
+        app:rb_duration="5000"
+        app:rb_scale="6">
+
+        <!-- App User -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nbAppUserPic"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/shape_circle_bg" />
+
+            <ImageView
+                android:id="@+id/nbAppUserBadge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="-23dp"
+                android:layout_marginTop="-20dp"
+                app:srcCompat="@drawable/shape_badge_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You"
+                android:textColor="@color/colorPrimaryText" />
+
+        </LinearLayout>
+
+    </org.octabyte.zeem.Utils.RippleBackground>
+
+    <RelativeLayout
+        android:id="@+id/rlNearByUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/nbLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="158dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="58dp">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="180dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="63dp">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="181dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="158dp"
+            android:layout_marginStart="70dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="70dp">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="112dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="112dp"
+            android:layout_marginEnd="132dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="132dp">
+
+            <include layout="@layout/subview_nearby_user1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="85dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="54dp">
+
+            <include layout="@layout/subview_nearby_user2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="83dp"
+            android:layout_marginTop="67dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="83dp">
+
+            <include layout="@layout/subview_nearby_user2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="76dp"
+            android:layout_marginStart="106dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="106dp">
+
+            <include layout="@layout/subview_nearby_user2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nbLayout10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="87dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp">
+
+            <include layout="@layout/subview_nearby_user2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_footer_navigation"/>
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsNearByNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_centerInParent="true" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsNearByNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

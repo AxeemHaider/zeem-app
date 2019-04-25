@@ -1,0 +1,619 @@
+<resources>
+    <string name="app_name">Zeem</string>
+
+    <plurals name="likes_count">
+        <item quantity="one">%d Star</item>
+        <item quantity="other">%d Stars</item>
+    </plurals>
+
+    <plurals name="members_count">
+        <item quantity="one">%d Member</item>
+        <item quantity="other">%d Members</item>
+    </plurals>
+
+    <plurals name="total_comments">
+        <item quantity="one">&#160; &#x2022; %d Comment</item>
+        <item quantity="other">&#160; &#x2022; %d Comments</item>
+    </plurals>
+
+    <!-- Allow Char -->
+    <string name="allowed_char_for_name">abcdefghijklmnopqrstuvwxyzQWERTYUIOPLKJHGFDSAZXCVBNM 0123456789</string>
+    <string name="allowed_char_for_username">QWERTYUIOPLKJHGFDSAZXCVBNMabcdefghijklmnopqrstuvwxyz_.0123456789</string>
+
+    <!-- Web Links -->
+    <string name="web_zeem">http://zeem.octabyte.org</string>
+    <string name="web_terms_and_condition">http://zeem.octabyte.org/terms.html</string>
+    <string name="web_feedback">https://goo.gl/forms/7ifBHjBGqzGcQARo2</string>
+    <string name="web_contact_us">https://goo.gl/forms/2o8CUV8AGaTJVVQ43</string>
+
+    <string name="tap_to_play">Tap to play</string>
+    <string name="type_a_comment">Type a comment</string>
+    <string name="notifications">Notifications</string>
+    <string name="requests">REQUESTS</string>
+    <string name="post">POST</string>
+    <string name="expire">Expire</string>
+    <string name="tag_people">Tag People</string>
+    <string name="turn_off_comments">TURN OFF COMMENTS</string>
+    <string name="search">Search</string>
+    <string name="powered_by_octabyte">Powered By OctaByte</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_phone_number">Phone number (e.g 650 555 1234)</string>
+    <string name="log_in">Log in</string>
+    <string name="ooops">Ooops!</string>
+    <string name="no_internet_connection_found">No internet connection found.</string>
+    <string name="check_your_connection">Check connection.</string>
+    <string name="whoops_nothing_found">Whoops, nothing found!</string>
+    <string name="we_couldn_t_find_anything_related_to_this">We couldn\'t find anything related to this.</string>
+    <string name="maybe_check_later">Maybe check later.</string>
+    <string name="retry">Retry</string>
+    <string name="loading_msg">Loading…</string>
+    <string name="slide_to_cancel">Slide to cancel</string>
+    <string name="title_comment">Comments</string>
+    <string name="error_in_network_connection">Error in Network Connection</string>
+    <string name="toolbar_title_post">POST</string>
+
+    <!-- Used in Activity Friend -->
+    <string name="friends">Friends</string>
+    <string name="followers">Follower</string>
+    <string name="following">Following</string>
+    <string name="blocked">Blocked</string>
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="block">Block</string>
+    <string name="un_block">Unblock</string>
+    <string name="follow">Follow</string>
+    <string name="un_follow">Unfollow</string>
+    <string name="toolbar_likes">Stars</string>
+    <string name="create_list">CREATE</string>
+    <string name="lists">Circles</string>
+    <string name="toolbar_tag">Tagged</string>
+    <string name="toolbar_list_members">Circle Members</string>
+    <string name="toolbar_update">UPDATE</string>
+    <string name="list_name">Circle Name</string>
+    <string name="you_can_add_only_friends">You can add only friends</string>
+    <string name="toolbar_new_list">New Circle</string>
+    <string name="toolbar_action_done">Done</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="verify">VERIFY</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="username">User Name</string>
+    <string name="fullname">Full Name</string>
+    <string name="your_status">Your slogan</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="accept">Accept</string>
+    <string name="your_profile_is_edit_successfully">Your profile is Updated successfully</string>
+
+    <string name="expire_prompt">Never</string>
+    <string-array name="expire_arrays">
+        <item>Never</item>
+        <item>1 Hr.</item>
+        <item>2 Hr.</item>
+        <item>1 Day</item>
+    </string-array>
+
+    <string name="show_tag_prompt">Public</string>
+    <string-array name="show_tag_arrays">
+        <item>Public</item>
+        <item>Private</item>
+        <item>Never</item>
+    </string-array>
+    <string name="show_tag_public">
+        Public: When someone Tags you in a post, it will appear in your public and private profile,
+        and your friends and followers can see that post.
+    </string>
+    <string name="show_tag_private">
+        Private: When someone Tags you in a post, it will appear in your private profile,
+        and only your friends can see that post.
+    </string>
+    <string name="show_tag_never">
+        Never: When someone Tags you in a post, A notification will be sent to you. Then you can allow
+        it to show in public or private profile.
+    </string>
+
+    <string name="who_tag_prompt">Public</string>
+    <string-array name="who_tag_arrays">
+        <item>Public</item>
+        <item>Friends</item>
+        <item>No one</item>
+    </string-array>
+    <string name="who_tag_public">
+        Public: Anyone can Tag you.
+    </string>
+    <string name="who_tag_friends">
+        Friends: Only your Friends can Tag you.
+    </string>
+    <string name="who_tag_no_one">
+        No one can tag you
+    </string>
+    <string name="anonymous_user_tag_option">Can anonymous user tag you or not?</string>
+    <string name="can_anonymous_person_tag_you">Are Anonymous persons Allowed to tag?</string>
+    <string name="who_can_tag_you">Who can Tag you?</string>
+    <string name="how_tag_posts_show_on_your_profile">How Tag posts show on your profile?</string>
+    <string name="tag_options">Tag Options</string>
+    <string name="options">Options</string>
+    <string name="toolbar_select_status">Status Type</string>
+    <string name="remove_all">Remove All</string>
+    <string name="cam_done">Done</string>
+    <string name="error">Error…</string>
+    <string name="dialog_badge_info">Currently, you have %s badge, to achieve the next %s badge you\'ve to gain %d stars.</string>
+    <string name="add_location">Add Location</string>
+    <string name="recording_is_too_short_or_not_found">A recording is too shot or not found.</string>
+    <string name="please_enter_verification_code">Please enter verification code</string>
+    <string name="error_media_play">Error! unable to play media</string>
+
+    <!-- Used in report dialog -->
+    <string name="it_s_spam">It\'s spam</string>
+    <string name="against_religion">Against religions</string>
+    <string name="sexual_content">Sexual content</string>
+    <string name="it_s_inappropriate">It\'s inappropriate</string>
+
+    <!-- Permissions -->
+    <string name="permissions_detail_login">
+        This app required SMS, Contact and Location permissions.
+        SMS permission is used to verify your phone number
+        and contacts are required to check your friends on this
+        app.
+    </string>
+    <string name="permission_title_login">Permission needed</string>
+
+    <string name="permission_title_create_profile">Need Some More Permissions</string>
+    <string name="permissions_detail_create_profile">
+        This app also needs Camera, External storage and Audio recording permissions.
+        External storage is used to save your pictures in memory and some app cache.
+        Audio Recording is used for audio comments and status.
+    </string>
+
+    <!-- Used for nothing found title and messages -->
+    <string name="nothing_found_title_in_comment">Whoops, no comment found!</string>
+    <string name="nothing_found_message_in_comment">No one commented on this post, Be the first</string>
+    <string name="nothing_found_message2_in_comment">to comment on it.</string>
+    <string name="nothing_found_title_in_nearby">Whoops, nothing found!</string>
+    <string name="nothing_found_message_in_nearby">No one is nearby, Maybe try</string>
+    <string name="nothing_found_message2_in_nearby"> in another time.</string>
+    <string name="nothing_found_title_in_create_list">Whoops, nothing found!</string>
+    <string name="nothing_found_message_in_create_list">We aren\'t able to find your friends, </string>
+    <string name="nothing_found_message2_in_create_list"> add some friends.</string>
+
+
+    <string name="info_comment_anonymous_title">Anonymous and Normal User:</string>
+    <string name="info_comment_anonymous_detail">Click on profile picture to switch between anonymous and normal user \n\n
+        Anonymous: \n In this mode no one knows who commented, your name and profile will not be visible to others. \n\n
+        Normal: \n Your profile picture and username visible to other people
+    </string>
+    <string name="info_comment_audio_title">Audio Comment:</string>
+    <string name="info_comment_audio_detail">You can send Audio comments, press and hold mic button to record audio.</string>
+
+    <string name="info_publish_expire_post_title">Expire Time:</string>
+    <string name="info_publish_expire_post_detail">
+	You can also set expire time for any post, set the expire time for a post and that post will be
+    automatically deleted after expire time from your profile and other people feed.</string>
+    <string name="info_publish_post_title">Private and Circle:</string>
+    <string name="info_publish_post_detail">Private: \n In private mode your friends can only see your status. \n\n
+        Circle: \n
+        You can define your own Circles, You can add your specific friends in Circle,
+        When Circle mode is set, only the friends in that specific Circle can view your status.
+    </string>
+    <string name="info_publish_post_turn_comment_title">Disable comments:</string>
+    <string name="info_publish_post_turn_comment_detail">If you want no one to comment on your post then you can disable comments.</string>
+
+    <string name="info_select_status_talking_title">Talking Photo:"</string>
+    <string name="info_select_status_talking_detail">With Talking Photo status you can record Audio caption on photos</string>
+    <string name="info_select_status_audio_title">Audio Status:</string>
+    <string name="info_select_status_audio_detail">You can also publish Audio status</string>
+
+    <string name="info_story_comment_title">Story Comment:</string>
+    <string name="info_story_comment_detail">You can comment on Stories, Story comments are same as status comments</string>
+    <string name="info_story_slide_title">Swipe:</string>
+    <string name="info_stoy_slide_detail">Swipe lift or right for next or previous story slide</string>
+
+    <string name="info_list_remove_member_title">Remove members:</string>
+    <string name="info_list_remove_member_detail">If you want to remove any member from your Circle, Just swipe left that member and it will be removed.</string>
+
+    <string name="info_home_private_title">Private Profile:</string>
+    <string name="info_home_private">Private posts of your friends are displayed in the private section and your private posts are displayed in their private section.
+    The followers cannot see your private posts. To make someone a friend, it is necessary that you both have saved each other\'s mobile number.</string>
+    <string name="info_home_public_title">Public Profile:</string>
+    <string name="info_home_public">Public posts of your friends are displayed in here and your public posts are displayed in their public section. </string>
+    <string name="nothing_found_title_list">You\'ve not created any Circle</string>
+    <string name="nothing_found_mesaage1">By using Circle you can limit your \n post to specific persons! \n </string>
+    <string name="nothing_found_message2">Only members of this Circle can see your post</string>
+    <string name="info_profile_badge_title">Profile Badge:</string>
+    <string name="info_profile_badge_detail">Profile badge rank your profile. Click to view the current badge</string>
+    <string name="info_profile_saved_title">Saved Post:</string>
+    <string name="info_profile_saved_detail">From here you can get your saved posts.</string>
+    <string name="request_accept">Request Accepted</string>
+    <string name="report_send">Report sent</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="anonymous_profile_msg_in_comment">You can\'t view profile of Anonymous person</string>
+    <string name="anonymous_reply_msg_in_comment">You can\'t reply to anonymous person</string>
+
+
+    <!-- used in intro slide -->
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_anonymous_title">Anonymous Person!</string>
+    <string name="slide_anonymous_desc">By using this feature you can post status and audio/text comment
+	while hiding your identity. No one can know who posted this not even your friends!</string>
+
+    <string name="slide_audio_title">Audio Comment!</string>
+    <string name="slide_audio_desc">Now you can post Audio comment and status, Record your voice and have fun!</string>
+
+    <string name="slide_talking_title">Talking Photo!</string>
+    <string name="slide_talking_desc">
+        You can add Audio caption on your photos same like text caption! \n\n
+        Just think about,  How do you write sound made by cricket while going to garden?
+        ZEEM makes that possible. Ever brooded for hours thinking about a caption?
+        Let your voice act as a caption, speak into it and let the others find out what it is.
+    </string>
+
+    <string name="slide_profile_title"><![CDATA[Private & Public Profile!]]></string>
+    <string name="slide_profile_desc">
+        Here you have two different profiles Private and Public.
+        Only your friends can see the private profile. To make someone friend it is
+		necessary you both have saved each other\'s mobile number in your cell
+		\n\n Anyone can follow you on the public profile. Your followers can\'t see your private profile!</string>
+
+    <string name="slide_circle_title">Create Circle!</string>
+    <string name="slide_circle_desc">Create a different circle for different people (e.g Family, Friends and Class Fellows).
+    Posting in a Circle can only be seen by the members of that circle, they can comment or Star on your post. Only circle members can see that post!</string>
+
+    <string name="slide_badge_title">Earn Badges!</string>
+    <string name="slide_badge_desc">Your profile will be ranked according to star given by other people,
+    You can check your badge anytime in your profile and know how many stars you need for next badge!</string>
+
+    <string name="slide_nearby_title">Nearby!</string>
+    <string name="slide_nearby_desc">Find people who are near to you, you can easily find people who
+    are nearby. In private profile, only your nearby friends will appear. \n\n
+	In public profile
+    anyone will appear who is nearby, either it\'s a friend or not!</string>
+    <!-- End intro slide -->
+
+    <string name="invite_msg"><![CDATA[Help us to promote this App, Tell other people that you are using this App. Invite friends on whatsApp. This option is always available in Setting -> invite friend]]></string>
+    <string name="invite_title">Invite friends from WhatsApp</string>
+
+    <string name="top_post">Top \n Post</string>
+    <string name="brown_post">Bronze \n Post</string>
+    <string name="silver_post">Silver \n Post</string>
+    <string name="brown_user">Bronze \n User</string>
+    <string name="silver_user">Silver \n User</string>
+    <string name="gold_user">Gold \n User</string>
+    <string name="write_caption_here">Write Caption here…</string>
+    <string name="got_it">Got it</string>
+
+    <string name="native_camera_msg_when_preview_not_show">We are unable to show preview for the camera. App camera is in Beta mode,
+    Sometimes it does not work for some devices. It seems your app does not support this camera. Please use any external camera or
+    Pick photos/videos from Gallery.</string>
+    <string name="native_camera_msg_when_optimal_preview">We are unable to get optimal preview size for the camera.
+    App camera is in Beta mode, Sometimes it does not work for some devices.
+	It seems your app does not support this camera.
+	Please use any external camera or Pick photos/videos from Gallery.</string>
+
+    <string name="message_send">✓</string>
+    <string name="message_received">✓✓</string>
+    <string name="type_a_message">Type a message</string>
+
+    <!-- New TEXT -->
+    <string name="slide_chat_title">Instant Chat!</string>
+    <string name="slide_chat_desc">
+        Instant Chat is designed to provide you with ultimate privacy. \n
+        Chat with your friends in a more secure way. Allow you to communicate directly from your
+        device to another one, which means there is no server between your devices to store your private chat history or something.
+        Having no intermediate server means your chat is fully secure, even we can not see it.   \n\n
+
+        Anonymous Chat:
+        Instant Chat also allows communicating with someone while hiding your identity.  \n\n
+
+    </string>
+    <string name="native_camera_msg_fail_to_connect_camera">Fail to connect with camera service. App camera is
+    in Beta mode, Sometimes it does not work for some devices. It seems your app has not supported this camera.
+    Please use the native camera or Pick photos/videos from Gallery.</string>
+    <string name="chat_request_detail">
+        Send a chat request to this friend,
+        Instant chat allows you to chat from device to device without any intermediate server.
+    </string>
+    <string name="chat_request_title">Chat Request</string>
+
+    <string name="info_profile_chat_title">Instant Chat:</string>
+    <string name="info_profile_chat_detail">
+        Chat with your friends in a more secure way. Allow you to communicate directly from your
+        device to another one without any intermediate server to store your private chat history or something.  \n\n
+        Anonymous Chat:\n
+        Instant Chat also allows communicating with someone while hiding your identity.
+    </string>
+
+    <string name="info_instant_chat_title">Instant Chat:</string>
+    <string name="info_instant_chat_detail">
+        Securely communicate with your friend directly from device to device
+        without any intermediate server.  \n\n
+        Limitation:\n
+        Because there is no intermediate server So, we are not able to save your chats.
+        Once you end the chat it will disappear and you won\'t be able to retrieve it back.
+        That is all for your privacy.
+    </string>
+    <string name="by_log_in_you_are_accepting">By Log in you are accepting &#160;</string>
+    <string name="term_and_condition">Terms and conditions</string>
+    <string name="verifying">Verifying…</string>
+    <string name="dialog_location_setting">We are not able to find the location on your phone. Make sure location setting is enabled.</string>
+    <string name="dialog_location_setting_title">Enable location setting</string>
+    <string name="permission_storage_title">Storage Permission</string>
+    <string name="permission_storage_msg">Storage permission is required to store App data and cache in external memory, it will not affect other data.</string>
+    <string name="permission_required_title">Permission Required</string>
+    <string name="permission_required_msg">Network and storage permission is required to run this app. Without these permissions, the app does not work.
+    Please allow using this App.</string>
+    <string name="permission_contacts_title">Contacts Permission</string>
+    <string name="permission_contact_msg">
+        Your contacts are required to find friends on this App.
+        This is one-time permission once your profile set up you can disable this permission.
+        Without the contacts, the app is not able to find any friend.
+        If you cancel this permission you need to manually check friends.
+        Allow doing this automatically(Recommended).
+    </string>
+    <string name="permission_location_title">Location Permission</string>
+    <string name="permission_location_msg">To search nearby people, you need to grant location permission. Without this permission, the app is not able to search.</string>
+    <string name="permission_camera_title">Camera Permission</string>
+    <string name="permission_camera_msg">Without camera permission, you can not use a camera for this App. Allow the camera to use it.</string>
+    <string name="permission_audio_title">Audio Permission</string>
+    <string name="permission_audio_msg">Audio permission is required to use the microphone and record your voice for audio status. 
+    Grant permission to use this feature.</string>
+    <string name="save_mobile_number_in_contacts">Save mobile number in contacts</string>
+    <string name="permission_write_contact_title">Write Contact Permission</string>
+    <string name="permission_write_contact_msg">To save phone number in mobile contacts this permission is required.</string>
+    <string name="re_send_code">RE-SEND CODE</string>
+    <string name="verification_code_incorrect">Your verification code is incorrect, please enter a correct pin code.
+</string>
+    <string name="pin_code_resend">Pin code resend</string>
+    <string name="account_blocked">Account Blocked!</string>
+    <string name="account_blocked_msg">Your account is blocked due to the violation of Terms and conditions. 
+    If you think it\'s an Error, contact us on a website.</string>
+    <string name="invalid_phone_format">The format of the phone number provided is incorrect. Please enter the 
+    phone number in the format [+][country code][subscriber number]</string>
+    <string name="info_add_friend_title">Add Friend</string>
+    <string name="info_add_friend_msg_detail">
+        Click on this icon to add a new friend, enter the name and phone number.
+        If your phone number is already in other person contact list you
+        will become automatically friend with this, otherwise, a friend request is
+        send to the other person along with your phone number.</string>
+    <string name="info_external_camrea_title">External Camera:</string>
+    <string name="info_external_camera_msg">Use any of your favorite cameras. ZEEM is compatible with any external camera. You can take a picture from any other camera and can post on ZEEM.</string>
+    <string name="status_text_heading">Text writting</string>
+    <string name="status_text_msg">Allow to write post in text with different background colors</string>
+    <string name="status_audio_recording">Audio Recording</string>
+    <string name="status_audio_recording_msg">Now, you can also post audio status. Record your voice and have fun.</string>
+    <string name="status_gif">GIF</string>
+    <string name="status_gif_msg">Create amazing animation in GIF. ZEEM camera allow you to record GIF</string>
+    <string name="status_photo_heading">Photos</string>
+    <string name="status_heading_msg">Pick a photo from your phone. You can also use any external camera.</string>
+    <string name="status_talking_photo_heading">Talking Photo</string>
+    <string name="status_talking_photo_msg">Record Audio caption on your photos same like text caption. Let your voice act</string>
+    <string name="status_camera_heading">Camera</string>
+    <string name="status_camera_msg">Capture photos and videos from camera</string>
+    <string name="info_color_title">Swipe on colors:</string>
+    <string name="info_color_user_msg">Swipe on colors to see more.</string>
+    <string name="user_alert_update_app">New Version Available</string>
+    <string name="user_alert_update_app_msg">There is a newer version available for download! Please update app by visiting the Play Store.</string>
+    <string name="delete_comment">Delete Comment</string>
+    <string name="delete_comment_msg">Delete this comment, once you delete this you are not able to undo.</string>
+
+    <!-- New editing -->
+    <string name="profile_no_post">No Post</string>
+    <string name="profile_no_post_msg">You have not any post. Start posting \n and your posts are shown here.</string>
+    <string name="profile_no_saved_post">No saved post</string>
+    <string name="profile_no_saved_post_msg">You have not saved any post yet. \n Your saved post shows here.</string>
+
+
+    <!-- Country codes -->
+    <string-array name="CountryCodes" >
+        <item>+93,AF</item>
+        <item>+355,AL</item>
+        <item>+213,DZ</item>
+        <item>+376,AD</item>
+        <item>+244,AO</item>
+        <item>+672,AQ</item>
+        <item>+54,AR</item>
+        <item>+374,AM</item>
+        <item>+297,AW</item>
+        <item>+61,AU</item>
+        <item>+43,AT</item>
+        <item>+994,AZ</item>
+        <item>+973,BH</item>
+        <item>+880,BD</item>
+        <item>+375,BY</item>
+        <item>+32,BE</item>
+        <item>+501,BZ</item>
+        <item>+229,BJ</item>
+        <item>+975,BT</item>
+        <item>+591,BO</item>
+        <item>+387,BA</item>
+        <item>+267,BW</item>
+        <item>+55,BR</item>
+        <item>+673,BN</item>
+        <item>+359,BG</item>
+        <item>+226,BF</item>
+        <item>+95,MM</item>
+        <item>+257,BI</item>
+        <item>+855,KH</item>
+        <item>+237,CM</item>
+        <item>+1,CA</item>
+        <item>+238,CV</item>
+        <item>+236,CF</item>
+        <item>+235,TD</item>
+        <item>+56,CL</item>
+        <item>+86,CN</item>
+        <item>+61,CX</item>
+        <item>+61,CC</item>
+        <item>+57,CO</item>
+        <item>+269,KM</item>
+        <item>+242,CG</item>
+        <item>+243,CD</item>
+        <item>+682,CK</item>
+        <item>+506,CR</item>
+        <item>+385,HR</item>
+        <item>+53,CU</item>
+        <item>+357,CY</item>
+        <item>+420,CZ</item>
+        <item>+45,DK</item>
+        <item>+253,DJ</item>
+        <item>+670,TL</item>
+        <item>+593,EC</item>
+        <item>+20,EG</item>
+        <item>+503,SV</item>
+        <item>+240,GQ</item>
+        <item>+291,ER</item>
+        <item>+372,EE</item>
+        <item>+251,ET</item>
+        <item>+500,FK</item>
+        <item>+298,FO</item>
+        <item>+679,FJ</item>
+        <item>+358,FI</item>
+        <item>+33,FR</item>
+        <item>+689,PF</item>
+        <item>+241,GA</item>
+        <item>+220,GM</item>
+        <item>+995,GE</item>
+        <item>+49,DE</item>
+        <item>+233,GH</item>
+        <item>+350,GI</item>
+        <item>+30,GR</item>
+        <item>+299,GL</item>
+        <item>+502,GT</item>
+        <item>+224,GN</item>
+        <item>+245,GW</item>
+        <item>+592,GY</item>
+        <item>+509,HT</item>
+        <item>+504,HN</item>
+        <item>+852,HK</item>
+        <item>+36,HU</item>
+        <item>+91,IN</item>
+        <item>+62,ID</item>
+        <item>+98,IR</item>
+        <item>+964,IQ</item>
+        <item>+353,IE</item>
+        <item>+44,IM</item>
+        <item>+972,IL</item>
+        <item>+39,IT</item>
+        <item>+225,CI</item>
+        <item>+81,JP</item>
+        <item>+962,JO</item>
+        <item>+7,KZ</item>
+        <item>+254,KE</item>
+        <item>+686,KI</item>
+        <item>+965,KW</item>
+        <item>+996,KG</item>
+        <item>+856,LA</item>
+        <item>+371,LV</item>
+        <item>+961,LB</item>
+        <item>+266,LS</item>
+        <item>+231,LR</item>
+        <item>+218,LY</item>
+        <item>+423,LI</item>
+        <item>+370,LT</item>
+        <item>+352,LU</item>
+        <item>+853,MO</item>
+        <item>+389,MK</item>
+        <item>+261,MG</item>
+        <item>+265,MW</item>
+        <item>+60,MY</item>
+        <item>+960,MV</item>
+        <item>+223,ML</item>
+        <item>+356,MT</item>
+        <item>+692,MH</item>
+        <item>+222,MR</item>
+        <item>+230,MU</item>
+        <item>+262,YT</item>
+        <item>+52,MX</item>
+        <item>+691,FM</item>
+        <item>+373,MD</item>
+        <item>+377,MC</item>
+        <item>+976,MN</item>
+        <item>+382,ME</item>
+        <item>+212,MA</item>
+        <item>+258,MZ</item>
+        <item>+264,NA</item>
+        <item>+674,NR</item>
+        <item>+977,NP</item>
+        <item>+31,NL</item>
+        <item>+599,AN</item>
+        <item>+687,NC</item>
+        <item>+64,NZ</item>
+        <item>+505,NI</item>
+        <item>+227,NE</item>
+        <item>+234,NG</item>
+        <item>+683,NU</item>
+        <item>+850,KP</item>
+        <item>+47,NO</item>
+        <item>+968,OM</item>
+        <item>+92,PK</item>
+        <item>+680,PW</item>
+        <item>+507,PA</item>
+        <item>+675,PG</item>
+        <item>+595,PY</item>
+        <item>+51,PE</item>
+        <item>+63,PH</item>
+        <item>+870,PN</item>
+        <item>+48,PL</item>
+        <item>+351,PT</item>
+        <item>+1,PR</item>
+        <item>+974,QA</item>
+        <item>+40,RO</item>
+        <item>+7,RU</item>
+        <item>+250,RW</item>
+        <item>+590,BL</item>
+        <item>+685,WS</item>
+        <item>+378,SM</item>
+        <item>+239,ST</item>
+        <item>+966,SA</item>
+        <item>+221,SN</item>
+        <item>+381,RS</item>
+        <item>+248,SC</item>
+        <item>+232,SL</item>
+        <item>+65,SG</item>
+        <item>+421,SK</item>
+        <item>+386,SI</item>
+        <item>+677,SB</item>
+        <item>+252,SO</item>
+        <item>+27,ZA</item>
+        <item>+82,KR</item>
+        <item>+34,ES</item>
+        <item>+94,LK</item>
+        <item>+290,SH</item>
+        <item>+508,PM</item>
+        <item>+249,SD</item>
+        <item>+597,SR</item>
+        <item>+268,SZ</item>
+        <item>+46,SE</item>
+        <item>+41,CH</item>
+        <item>+963,SY</item>
+        <item>+886,TW</item>
+        <item>+992,TJ</item>
+        <item>+255,TZ</item>
+        <item>+66,TH</item>
+        <item>+228,TG</item>
+        <item>+690,TK</item>
+        <item>+676,TO</item>
+        <item>+216,TN</item>
+        <item>+90,TR</item>
+        <item>+993,TM</item>
+        <item>+688,TV</item>
+        <item>+971,AE</item>
+        <item>+256,UG</item>
+        <item>+44,GB</item>
+        <item>+380,UA</item>
+        <item>+598,UY</item>
+        <item>+1,US</item>
+        <item>+998,UZ</item>
+        <item>+678,VU</item>
+        <item>+39,VA</item>
+        <item>+58,VE</item>
+        <item>+84,VN</item>
+        <item>+681,WF</item>
+        <item>+967,YE</item>
+        <item>+260,ZM</item>
+        <item>+263,ZW</item>
+    </string-array>
+
+</resources>

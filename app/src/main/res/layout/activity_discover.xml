@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/include_search" />
+
+    <!-- Starting grid view and list view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/bottomNavigation">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvFeedGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <android.support.v7.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/rvFeedListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+    <!-- End grid view and list view -->
+
+    <LinearLayout
+        android:id="@+id/lySuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/universal_padding">
+
+            <TextView
+                android:id="@+id/tvTopPost"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg"
+                android:gravity="center_vertical"
+                android:text="@string/top_post"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBrownPost"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg3"
+                android:gravity="center_vertical"
+                android:text="@string/brown_post"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/tvSilverPost"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg2"
+                android:gravity="center_vertical"
+                android:text="@string/silver_post"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/universal_padding">
+
+            <TextView
+                android:id="@+id/tvBrownUser"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg2"
+                android:gravity="center_vertical"
+                android:text="@string/brown_user"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSilverUser"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg3"
+                android:gravity="center_vertical"
+                android:text="@string/silver_user"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/tvGoldUser"
+                android:layout_width="@dimen/status_textView_width_height"
+                android:layout_height="@dimen/status_textView_width_height"
+                android:background="@drawable/shape_circular_textview_bg"
+                android:gravity="center_vertical"
+                android:text="@string/gold_user"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/bottomNavigation"
+        android:visibility="gone"/>
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsDiscoverLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsDiscoverNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsDiscoverNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <include layout="@layout/include_footer_navigation" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!-- Header Toolbar -->
+    <include layout="@layout/subview_appbar" />
+
+    <!-- Post Feed - RecylerView -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFeed"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Loading view -->
+    <ViewStub
+        android:id="@+id/vsSinglePostLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_progress_bar"
+        android:layout_centerInParent="true" />
+
+    <!-- No internet found -->
+    <ViewStub
+        android:id="@+id/vsSinglePostNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_no_internet"
+        android:layout_centerInParent="true" />
+
+
+    <!-- Nothing found view -->
+    <ViewStub
+        android:id="@+id/vsSinglePostNothingFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/include_nothing_found"
+        android:layout_centerInParent="true" />
+
+    <!-- BottomNavigationView - Footer -->
+    <include layout="@layout/include_footer_navigation" />
+
+</RelativeLayout>

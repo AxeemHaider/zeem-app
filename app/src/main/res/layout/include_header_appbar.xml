@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+            <!-- Recylerview - Contain all the content of Story layout -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvStories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:scrollbars="none"
+                app:layout_collapseMode="parallax" />
+
+        <!-- Toolbar that contain all icons and log -->
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/appbar_height"
+            android:elevation="4dp"
+            android:background="@android:color/white"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="@dimen/icon_width_height"
+                app:srcCompat="@drawable/logo_small"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end">
+
+                <ImageView
+                    android:id="@+id/ivAppbarPublic"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    app:srcCompat="@drawable/ic_header_public"
+                    android:layout_marginRight="@dimen/margin_btw_icons"
+                    android:layout_marginEnd="@dimen/margin_btw_icons" />
+
+                <ImageView
+                    android:id="@+id/ivAppbarPrivate"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    app:srcCompat="@drawable/ic_header_private"
+                    android:layout_marginRight="@dimen/margin_btw_icons"
+                    android:layout_marginEnd="@dimen/margin_btw_icons" />
+
+                <ImageView
+                    android:id="@+id/ivAppbarExplorer"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    app:srcCompat="@drawable/ic_header_explorer"
+                    android:layout_marginRight="@dimen/margin_btw_icons"
+                    android:layout_marginEnd="@dimen/margin_btw_icons"/>
+
+                <ImageView
+                    android:id="@+id/ivAppbarUser"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</merge>
